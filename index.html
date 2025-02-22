@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticketing System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-2 sidebar">
+                <div class="sidebar-header">
+                    <h4>Ticketing System</h4>
+                </div>
+                <div class="sidebar-menu-section">
+                    <small class="text-muted px-3">MENU</small>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">
+                                <i class="bi bi-grid-1x2"></i> Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="bi bi-layers"></i> Assets
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="sidebar-menu-section mt-4">
+                    <small class="text-muted px-3">DIGITAL MEDIA</small>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link d-flex justify-content-between" href="#">
+                                <span><i class="bi bi-ticket-perforated"></i> Tickets</span>
+                                <span class="badge rounded-pill">23</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="sidebar-menu-section mt-4">
+                    <small class="text-muted px-3">COMPUTING</small>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link d-flex justify-content-between" href="#">
+                                <span><i class="bi bi-ticket-perforated"></i> Tickets</span>
+                                <span class="badge rounded-pill">15</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="bi bi-folder"></i> Departments
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Main Content -->
+            <div class="col-md-10 main-content">
+                <div class="main-header d-flex justify-content-between align-items-center">
+                    <h2>Good Morning Liz,</h2>
+                    <div class="user-info d-flex align-items-center">
+                        <img src="liz.jpg" alt="Liz Jennings">
+                        <div class="user-details me-2">
+                            <div class="user-name">Liz Jennings</div>
+                            <div class="user-role">Admin</div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <!-- Ticket Statistics -->
+                <div class="row ticket-stats mt-4">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <small class="text-muted">TO DO</small>
+                                        <h3 class="mt-2">450</h3>
+                                    </div>
+                                    <div>
+                                        <i class="bi bi-plus-square text-primary"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card bg-light">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <small class="text-muted">IN PROGRESS</small>
+                                        <h3 class="mt-2">300</h3>
+                                    </div>
+                                    <div>
+                                        <a href="#" class="text-primary">Link</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card bg-light-green">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <small class="text-muted">COMPLETED</small>
+                                        <h3 class="mt-2">600</h3>
+                                    </div>
+                                    <div>
+                                        <a href="#" class="text-primary">Link</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tickets Table Section -->
+                <div class="tickets-section mt-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <h4>Tickets</h4>
+                                <div class="filters d-flex">
+                                    <div class="input-group me-2">
+                                        <span class="input-group-text">@</span>
+                                        <select class="form-select">
+                                            <option>Username</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-group me-2">
+                                        <span class="input-group-text">@</span>
+                                        <select class="form-select">
+                                            <option>Username</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-group me-2">
+                                        <span class="input-group-text">@</span>
+                                        <select class="form-select">
+                                            <option>Username</option>
+                                        </select>
+                                    </div>
+                                    <button class="btn btn-primary">CREATE A TICKET</button>
+                                </div>
+                            </div>
+                            
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th># Number</th>
+                                            <th>Name</th>
+                                            <th>Assignee</th>
+                                            <th>Due Date</th>
+                                            <th>Status</th>
+                                            <th>Department</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>#3571883</td>
+                                            <td>IT Ticket Please Help Me</td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="https://via.placeholder.com/24" class="rounded-circle me-2" alt="">
+                                                    Liz Jennings
+                                                </div>
+                                            </td>
+                                            <td>2/21/2025</td>
+                                            <td><span class="badge bg-light text-dark">TO DO</span></td>
+                                            <td>Digital Media</td>
+                                            <td>#3571883</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#3571882</td>
+                                            <td>LIZZZZ HALP I don't kn.</td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="https://via.placeholder.com/24" class="rounded-circle me-2" alt="">
+                                                    Liz Jennings
+                                                </div>
+                                            </td>
+                                            <td>1/18/2025</td>
+                                            <td><span class="badge bg-purple text-white">IN PROGRESS</span></td>
+                                            <td>Computing</td>
+                                            <td>#3571882</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#3571881</td>
+                                            <td>Hello !!! HALP !! JSHFF</td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="https://via.placeholder.com/24" class="rounded-circle me-2" alt="">
+                                                    Liz Jennings
+                                                </div>
+                                            </td>
+                                            <td>1/11/2025</td>
+                                            <td><span class="badge bg-success">DONE</span></td>
+                                            <td>Computing</td>
+                                            <td>#3571881</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <!-- Pagination -->
+                            <nav>
+                                <ul class="pagination justify-content-center">
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Previous">
+                                            <span aria-hidden="true">&laquo;</span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Next">
+                                            <span aria-hidden="true">&raquo;</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -79,11 +79,11 @@ body {
 }
 
 .bg-light-green {
-    background-color: #e0f2f1;
+    background-color:#98fb98;
 }
 
-.bg-light {
-    background-color: #f3f0ff;
+.bg-light-purple {
+    background-color: #98fb98;
 }
 
 /* Table Styles */
@@ -112,6 +112,16 @@ body {
 
 .bg-purple {
     background-color: #7749F8;
+}
+
+/*Icon Colors*/
+.icon-purple{
+    color:#7749F8;
+    font-size: 24px;
+}
+.icon-green{
+    color:#32cd32;
+    font-size: 24px;
 }
 
 /* Pagination Styles */
@@ -159,6 +169,16 @@ body {
 }
 
 /*avatar*/
+
+.highlight-new {
+    animation: highlightRow 2s;
+  }
+  
+  @keyframes highlightRow {
+    0% { background-color: #e8f5e9; }
+    100% { background-color: transparent; }
+  }
+  
 
 /* Responsive Adjustments */
 @media (max-width: 992px) {

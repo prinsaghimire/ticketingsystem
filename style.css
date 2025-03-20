@@ -1,8 +1,10 @@
+/* Base styles */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI';
     background-color: #f8f9fa;
 }
 
+/* Text styling */
 .text-muted {
     font-size: small;
     font-weight: bold;
@@ -10,7 +12,7 @@ body {
     color: var(--bs-gray-500) !important;
 }
 
-/* Sidebar Styles */
+/* ======== SIDEBAR STYLES (Desktop) ======== */
 .sidebar {
     background-color: white;
     min-height: 100vh;
@@ -51,7 +53,7 @@ body {
     background-color: #7749f8;
 }
 
-/* Main Content Styles */
+/* ======== MAIN CONTENT STYLES (Desktop) ======== */
 .main-content {
     padding: 30px;
 }
@@ -59,6 +61,18 @@ body {
 .main-header {
     padding-bottom: 20px;
     border-bottom: 1px solid #f1f1f1;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .user-name {
@@ -70,7 +84,7 @@ body {
     color: #6c757d;
 }
 
-/* Card Styles */
+/* ======== CARD STYLES (Shared) ======== */
 .card {
     border: none;
     border-radius: 10px;
@@ -79,14 +93,14 @@ body {
 }
 
 .bg-light-green {
-    background-color:#98fb9840;
+    background-color: #98fb9840;
 }
 
 .bg-light-purple {
     background-color: #aa8bff30;
 }
 
-/* Table Styles */
+/* ======== TABLE STYLES (Desktop) ======== */
 .table {
     color: #495057;
 }
@@ -103,7 +117,7 @@ body {
     vertical-align: middle;
 }
 
-/* Status Badges */
+/* ======== STATUS BADGES (Shared) ======== */
 .badge {
     padding: 8px 12px;
     font-weight: 500;
@@ -114,17 +128,22 @@ body {
     background-color: #7749F8;
 }
 
-/*Icon Colors*/
-.icon-purple{
-    color:#7749F8;
-    font-size: 24px;
-}
-.icon-green{
-    color:#32cd32;
+/* ======== ICON STYLES (Shared) ======== */
+.icon-purple {
+    color: #7749F8;
     font-size: 24px;
 }
 
-/* Pagination Styles */
+.icon-green {
+    color: #32cd32;
+    font-size: 24px;
+}
+
+.icon-big {
+    font-size: 28px;
+}
+
+/* ======== PAGINATION STYLES (Desktop) ======== */
 .pagination {
     margin-top: 30px;
 }
@@ -146,21 +165,27 @@ body {
     box-shadow: none;
 }
 
-/* Button Styles */
+/* ======== BUTTON STYLES (Shared) ======== */
 .btn-primary {
     background-color: #7749F8;
     border-color: #7749F8;
 }
 
-.btn-primary:hover {
+.btn-primary:hover, .btn-primary:focus {
     background-color: #6a48b0;
     border-color: #6a48b0;
 }
 
-/* Form Controls */
+/* ======== FORM CONTROLS (Shared) ======== */
 .form-select, .form-control {
     border-radius: 5px;
     border: 1px solid #e0e0e0;
+    padding: 10px 12px;
+}
+
+.form-label {
+    font-weight: 500;
+    color: #495057;
 }
 
 .input-group-text {
@@ -168,20 +193,233 @@ body {
     border: 1px solid #e0e0e0;
 }
 
-/*avatar*/
-
+/* ======== ANIMATION EFFECTS (Shared) ======== */
 .highlight-new {
     animation: highlightRow 2s;
-  }
+}
   
-  @keyframes highlightRow {
+@keyframes highlightRow {
     0% { background-color: #e8f5e9; }
     100% { background-color: transparent; }
-  }
-  
+}
 
-/* Responsive Adjustments */
-@media (max-width: 992px) {
+/* ======== MOBILE HEADER STYLES ======== */
+.header {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.system-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.navbar-toggler {
+    border: none;
+    padding: 0.25rem;
+}
+
+/* ======== GREETING SECTION (Mobile) ======== */
+.greeting {
+    margin-top: 10px;
+}
+
+.greeting-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+/* ======== STATS SECTION (Mobile) ======== */
+.stats-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.stats-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.stats-card .card-header {
+    font-size: 0.85rem;
+    color: #6c757d;
+    padding: 12px 15px;
+    background-color: transparent;
+    border-bottom: none;
+}
+
+.stats-card .card-body {
+    padding: 5px 15px 15px;
+}
+
+.stats-number {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.link-text {
+    color: #7e57c2;
+    text-decoration: none;
+}
+
+/* Card Background Colors (Mobile) */
+.to-do {
+    background-color: white;
+}
+
+.in-progress {
+    background-color: #f3f0ff;
+}
+
+.completed {
+    background-color: #e0f2f1;
+}
+
+/* ======== TICKETS SECTION (Mobile) ======== */
+.tickets-section {
+    padding-bottom: 80px; /* Space for floating button */
+}
+
+.section-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.ticket-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.ticket-item {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.ticket-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.ticket-details {
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+.separator {
+    margin: 0 5px;
+    color: #dee2e6;
+}
+
+/* ======== FLOATING ACTION BUTTON (Mobile) ======== */
+.floating-action-btn {
+    display:none;
+}
+
+.floating-action-btn i {
+    font-size: 1.5rem;
+}
+
+/* ======== MODAL STYLES (Shared) ======== */
+.modal-content {
+    border-radius: 10px;
+    border: none;
+}
+
+.modal-header {
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.modal-footer {
+    border-top: 1px solid #f1f1f1;
+}
+
+/* ======== RESPONSIVE ADJUSTMENTS ======== */
+/* For mobile devices */
+@media (max-width: 767px) {
+    /* Hide desktop elements */
+    .sidebar {
+        display: none;
+    }
+    
+    .main-content {
+        padding: 0;
+        width: 100%;
+    }
+    
+    /* Show mobile elements */
+    .header, 
+    .greeting,
+    .stats-section,
+    .ticket-list{
+        display:flex;
+    }
+    .floating-action-btn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        z-index: 1000;
+        background-color: #7e57c2;
+        border-color: #7e57c2;
+    }
+    
+    /* Additional mobile styling */
+    body {
+        padding-bottom: 80px; /* For floating action button */
+    }
+    
+    .user-info {
+        display: none; /* Hide user info on mobile */
+    }
+    
+    .table-responsive {
+        display: none; /* Hide table on mobile */
+    }
+}
+
+/* For tablet devices */
+@media (min-width: 576px) and (max-width: 991px) {
+    .stats-section {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .stats-card {
+        flex: 1 1 30%;
+    }
+    
+    .container-fluid {
+        max-width: 720px;
+        margin: 0 auto;
+    }
+    
+    .sidebar {
+        min-height: auto;
+        position: relative;
+    }
+    
+    .ticket-stats .card {
+        margin-bottom: 15px;
+    }
+    
     .filters {
         flex-direction: column;
         align-items: flex-start;
@@ -192,18 +430,36 @@ body {
         width: 100%;
     }
     
-    .btn-primary {
+    .btn-primary:not(.floating-action-btn) {
         width: 100%;
     }
 }
 
-@media (max-width: 768px) {
-    .sidebar {
-        min-height: auto;
-        position: relative;
+
+/* @media (min-width: 992px) {
+    
+    .header,
+    .greeting-text,
+    .ticket-list,
+    .floating-action-btn {
+        display: none;
     }
     
-    .ticket-stats .card {
-        margin-bottom: 15px;
+    .container-fluid {
+        max-width: 960px;
+    }
+    
+  
+    .sidebar,
+    .main-content,
+    .table-responsive {
+        display: block;
     }
 }
+
+
+@media (min-width: 1200px) {
+    .container-fluid {
+        max-width: 1140px;
+    }
+} */
